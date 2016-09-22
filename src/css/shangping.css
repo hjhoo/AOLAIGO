@@ -461,4 +461,5 @@
 }
 #xpLast_c ul li:hover{
 	border: 1px solid #eaeaea;
+	box-shadow:0 0 10px #999;
 }
