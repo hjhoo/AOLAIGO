@@ -74,7 +74,7 @@
 
 
 				// 定位大图
-				var bigPos = {left:oLeft*ratio,top:oTop*ratio};
+				var bigPos = {left:minPos.left*ratio,top:minPos.top*ratio};
 
 				// 判断大图到底后不再移动
 				if(bigPos.top >= $bigPic.outerHeight()-$bigWrap.outerHeight()){

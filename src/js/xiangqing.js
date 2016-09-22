@@ -32,4 +32,22 @@ $(function(){
 			$('.xpgood_sh').css({'display':'none'})
 		}
 	});
+	
+	//商品点击切换
+	var $LGbtn = $('.s-zb');
+	var $LGpic = $('#xpLast_c').children("ul");
+	var flag =true;
+	$LGbtn.click(function(e){
+		e.preventDefault();
+		if(flag){
+			$LGpic.fadeOut();
+			$LGpic.eq(1).fadeIn();
+			flag = false;
+
+		}else{
+			$LGpic.fadeOut();
+			$LGpic.eq(0).fadeIn();
+			flag =true;
+		}
+	});
 });

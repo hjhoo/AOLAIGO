@@ -72,7 +72,8 @@ em,strong,i,b{
 .search_box{
 	width: 430px;
 	height: 68px;
-	padding-top: 6px;	
+	padding-top: 6px;
+	position: relative;	
 }
 .search_box p a{
 	padding-right: 16px;
@@ -99,6 +100,25 @@ em,strong,i,b{
 	background: none;
 	font-size: 16px;	
 }
+.datalist{
+	position: absolute;
+	top:100px;
+	right:280px;
+	display:none;
+	/*padding:10px;*/
+	width:200px;
+	border:1px solid #ddd;
+	line-height:2;
+	max-height:300px;
+	overflow-y: auto;
+	background-color:#fff ;
+}
+.datalist li{
+	border-bottom:1px dotted #ddd;
+	text-indent:10px;
+	z-index: 800;
+}
+
 /*navBox*/
 .shop ul li{
 	float: left;

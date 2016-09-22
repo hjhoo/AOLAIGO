@@ -1,4 +1,48 @@
 $(function(){
+	//搜索筛选
+	var namelist ="茵曼,Bees do（蜂行）,欧莎OSAO,THERMIX七格格,米莱达,背景色,lavidione 拉维迪欧,盛放,伊芙丽,初语,沐羊MUYANG,PRICH,Candie's,MURIEAL.K 玛蕊凯,La Chapelle,Duoyi朵以,LAGOGO,粉蓝衣橱,Donoratico达衣岩,Five Plus,凡释FASHONERY,Puella普埃拉,La Babite 拉贝缇,L.T.E（朗婷儿）,FA LOUINA法路易娜,KAVON卡汶,PEINAXI培娜,LuckyFriend ,大嘴猴,Betu/百图幻走moveup,BOSIDENG波司登,第五街,Y.miss,G2000,鸭鸭PLORY,艾格 WEEKEND,艾格 ES,艾格 ETAM";
+	namelist = namelist.split(',');
+
+	var $datalist = $('.datalist');
+	var $keyword = $('#keyword');
+
+	// 1)根据名单生成html结构，并写入.datalist
+	var $ul = $('<ul/>');
+	$.each(namelist,function(idx,val){
+		$('<li/>').text(val).appendTo($ul);
+	});
+	$ul.appendTo($datalist);
+
+	// 2）#keyword获得焦点时,显示.datalist
+	$keyword.focus(function(){
+		var keywork = $keyword.val();
+		$datalist.find('li').hide().filter(':contains('+keywork+')').show();
+
+		$datalist.slideDown();
+	})
+
+	// 3）失去焦点,隐藏.datalist
+	.blur(function(){
+		$datalist.slideUp();
+	})
+
+	// 4）根据输入显示过滤结果
+	.on('input',function(){
+		var keywork = $keyword.val();
+
+		// 先全部隐藏，然后显示包含keyword的li
+
+		$datalist.find('li').hide().filter(':contains('+keywork+')').show();
+	});
+
+	// 5）点击名字写入输入框
+	$datalist.find('li').click(function(){
+		$keyword.val($(this).text());
+
+		var keywork = $keyword.val();
+		$datalist.find('li').hide().filter(':contains('+keywork+')').show();
+	})
+	
 //	topBar hover切换
 	$('.rightArea').on('mouseenter','li',function(){
 		$(this).find('ul').css('display','block');
@@ -17,7 +61,7 @@ $(function(){
 	}).on('mouseleave','li',function(){
 		$(this).find('div').css('display','none');
 	});
-//	今日特价
+//	今日特价tab切换页
 	var btn = $('.Sale_btn');
 	var picArr = $('.Sale_a');
 	var flag =true;
@@ -33,17 +77,7 @@ $(function(){
 			flag =true;
 		}
 	});
-	/*tab切换页*/
-	$('.Sale_btn').on('click','a',function(){
-		var idx=$(this).index();
-		$('.Sale_ban').children().eq(idx).css('display','block').siblings().css('display','none');
-	});
 	
-//	/*tab自动切换切换页*/
-//	var conut=0;
-//	setInterval(function(){
-//		conut++;
-//	})
 	//奢侈区切换
 	$('.luxury_tab').on('mouseenter','span',function(){
 		var idx=$(this).index();
@@ -83,7 +117,23 @@ $(function(){
 			$('.mallBk_num li').eq(iconut).css('background','#666').siblings().css('background','#cbcbcb');
 		},1000);
 	}
-	
+	//华盛商城LOGO点击切换
+	var $LGbtn = $('#logoBtn');
+	var $LGpic = $('.logoTab').children("ul");
+	var flag =true;
+	$LGbtn.click(function(e){
+		e.preventDefault();
+		if(flag){
+			$LGpic.slideUp();
+			$LGpic.eq(1).slideDown();
+			flag = false;
+
+		}else{
+			$LGpic.slideUp();
+			$LGpic.eq(0).slideDown();
+			flag =true;
+		}
+	});
 	
 	//	品牌上新手风琴效果
 	$('.New_list li').eq(0).css({width:400})
@@ -119,6 +169,24 @@ $(function(){
 			$('.rightTab').animate({right:0});		
 		}
 		lastIndex=idx;
+	});
+	
+	//跨境汇商品点击切换
+	var $LGbtn = $('.over_b');
+	var $LGpic = $('.overR').children("ul");
+	var flag =true;
+	$LGbtn.click(function(e){
+		e.preventDefault();
+		if(flag){
+			$LGpic.fadeOut();
+			$LGpic.eq(1).fadeIn();
+			flag = false;
+
+		}else{
+			$LGpic.fadeOut();
+			$LGpic.eq(0).fadeIn();
+			flag =true;
+		}
 	});
 	
 //	回到顶部

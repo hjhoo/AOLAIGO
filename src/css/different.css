@@ -509,7 +509,8 @@
     top: 35px;
     display: block;
     position: absolute;   
-    background: url(../img/core.png)no-repeat;     
+    background: url(../img/core.png)no-repeat; 
+    z-index:1000;    
 }  
 .logoTab .logoTab_c .logoTab_prev{	
 	left: 5px;
@@ -583,9 +584,10 @@
 }
 .overR{
 	position: relative;
-	/*margin-top: 14px;*/
-	width: 184px;
-	border: 1px solid #eaeaea;
+	height: 691px;
+    width: 182px;
+    border: 1px solid #eaeaea;
+    background: #fff;
 }
 .overR ul{
 	margin:35px 25px;
