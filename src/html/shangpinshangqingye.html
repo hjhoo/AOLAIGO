@@ -2,10 +2,14 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>华盛商城</title>
+		<title>商品详情页</title>
 		<link rel="stylesheet" href="../css/common.css"/>
 		<link rel="stylesheet" href="../css/different.css" />
+		<link rel="stylesheet" href="../css/shangping.css" />
+		<link rel="stylesheet" href="../css/jquery.lxzoom.css" />		
 		<script src="../js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/jquery.lxzoom.js" ></script>
+		<script type="text/javascript" src="../js/lunbo.js" ></script>
 		<script type="text/javascript" src="../js/aolaigo.js" ></script>
 	</head>
 	<body>
@@ -86,7 +90,7 @@
 				<div class="comWidth">
 					<div class="shopClass fl">
 						<h3>全部商品分类</h3>
-						<div class="shopClass_show">
+						<div class="shopClass_show" style="display: none;">
 							<ul>
 								<li>
 									<dl class="shopClass_item">
@@ -519,29 +523,272 @@
 					</div>									
 				</div>
 			</div>			
+		</div>		
+		<div class="xqCont">
+			<div class="xqCont_a">
+				<span></span><a href="#">奥莱商城〉运动服饰〉女士休闲运动服〉T恤〉PUMA/彪马〉女式经典系列短袖T恤 56922503</a>
+			</div>
+			<div class="xqCont_b ">
+				<div class="xqCont_b_f fl">
+					<div class="xqCont_b_f1 fl">
+						<ul class = 'simg'>
+							<li><img src="../img/xpPic2.jpg"/></li>
+							<li><img src="../img/xpPic3.jpg"/></li>
+							<li><img src="../img/xpPic4.jpg"/></li>
+							<li><img src="../img/xpPic5.jpg"/></li>
+							<li><img src="../img/xpPic6.jpg"/></li>
+						</ul>
+					</div>
+					<div id="box" class="lxzoom fl">
+						<img src="../img/xpPic2.jpg"/>
+					</div>	
+					<div style="clear:both;"></div>
+					<div class="xqCont_b_f3">
+						<ul>
+							<li>
+								<span class="xqCont_zp"></span><a href="javascript:void(0);">正品保障</a>
+							</li>
+							<li>
+								<span class="xqCont_tt"></span><a href="javascript:void(0);">天天低价</a>
+							</li>
+							<li>
+								<span class="xqCont_fx"></span><a href="javascript:void(0);">分享</a>
+							</li>
+							<li>
+								<span class="xqCont_sc"></span><a href="javascript:void(0);">收藏商品</a>
+							</li>
+						</ul>
+					</div>					
+				</div>				
+				<div class="xqCont_b_c fl">
+					<ul class="xqContB">						
+						<!---商品标题--->
+						<li class="xqCont_bti">
+							<span></span>
+							<i>PUMA 彪马 女式经典系列短袖T恤 56922503</i>							
+						</li>
+						<!--奥  莱  价-->
+						<li class="xqCont_pri">
+							<span>奥  莱  价:</span>
+							<em>￥129.00</em>
+							<i>￥199.00</i>
+						</li>
+						<li class="xqCont_item">
+							促销信息：
+							<em>满299.00元减100.00；赠送优惠券</em>							
+						</li>
+					</ul>	
+					<div class="xqCont_col">
+						<p class="fl">
+							选择颜色:
+						</p>							
+						<div class="fl">
+							浅灰色
+							<span></span>
+						</div>							
+					</div>
+					<div style="clear:both;"></div>
+					<div class="xqCont_siz">
+						<p class="fl">选择尺码:</p>						
+						<div class="fl">
+							L
+							<span></span>
+						</div>
+						<div class="fl">
+							M
+							<span></span>
+						</div>
+						<div class="fl">
+							XXL
+							<span></span>
+						</div>
+					</div>	
+					<div style="clear:both;"></div>
+					<div class="xqCont_btn">
+						<ul>
+							<li>
+								<div class="dtnum2">选择数量</div>
+								<div class="dtnum3">
+									剩余 <em>5</em> 件
+								</div>
+							</li>
+							<li>
+								<div class="xqCont_inp fl">
+									<input id="buyNum" value="1" placeholder="" class="datanub-value" type="text">
+								</div>
+								<div class="xqCont_ina fl">
+									<a href="javascript:void(0)" class="a-bm buyAdd">+</a>
+									<a class="buyReduce" href="javascript:void(0)">-</a>
+								</div>
+							</li>
+							<li>
+								<a id="addCart" class="addCart" href="javascript:void(0);">加入购物车</a>
+							</li>
+						</ul>
+						<div class="data-sao">
+							<span></span>
+							<ul>
+								<li class="lids1">下载移动客户端</li>
+								<li class="lids2">扫描二维码购买</li>
+							</ul>
+							<div class="dstelma" >
+								<img src="../img/aolaigo-app-dl.jpg" />
+							</div>
+						</div>
+					</div>					
+				</div>
+				<div class="xqCont_b_r fr">
+					<div class="bmLogo">
+						<a href="#"><img src="../img/bmlogo.jpg" alt="图片"/></a>
+					</div>
+					<div class="bmList">
+						<ul>
+							<li>商品编号：250202020171</li>
+							<li>EPR货号：01102032</li>
+							<li>发货地 ：深圳华盛奥莱购</li>
+							<li>二维码 ：</li>
+							<li id="bmLt"><img src="../img/erweima.png" alt="图片"/></li>
+						</ul>
+					</div>					
+					<div class="bmpin">
+						<dl>
+							<dt class="bmpin_a"></dt>
+							<dd>品牌授权</dd>
+						</dl>
+						<dl>
+							<dt class="bmpin_b"></dt>
+							<dd>极速配送</dd>
+						</dl>
+						<dl>
+							<dt class="bmpin_c"></dt>
+							<dd>正品低价</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="xqCont_c">
+				<div class="xqCont_c_f">
+					<ul>
+						<li></li>
+					</ul>
+				</div>
+				<div class="xqCont_c_r">
+					
+				</div>
+			</div>
 		</div>
-		<!--banner-->
-		<div class="banner">
-			<!--轮播-->
-			<ul class="bPicv3">
-				<li><a href="#"><img src="../img/pic7.jpg"/></a></li>
-				<li><a href="#"><img src="../img/pic8.jpg"/></a></li>
-				<li><a href="#"><img src="../img/pic9.jpg"/></a></li>
-				<li><a href="#"><img src="../img/pic10.jpg"/></a></li>
-				<li><a href="#"><img src="../img/pic11.jpg"/></a></li>
-			</ul>
-			<!--轮播计算页数的列表-->
-			<ul class="tabNum">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-			<!--轮播按钮-->
-			<span class="prevv3"></span>
-			<span class="nextv3"></span>				
+		<div style="clear:both;"></div>
+		<div class="xpList">
+			<div class="xpList_f fl">
+				<div class="xpList_top">
+					热门销售
+					<em>HOT</em>
+					<span class="hot_lg"></span>
+				</div>
+				<div class="xpList_bottom">
+					<ul>
+						<li>
+							<a href="#"><img src="../img/xpPic8.jpg"/></a>
+							<a href="#">女士短袖T恤 圆领短袖运</a>
+							<em>¥60.00</em>
+						</li>
+						<li>
+							<a href="#"><img src="../img/xpPic8.jpg"/></a>
+							<a href="#">女士短袖T恤 圆领短袖运</a>
+							<em>¥60.00</em>
+						</li>
+						<li>
+							<a href="#"><img src="../img/xpPic8.jpg"/></a>
+							<a href="#">女士短袖T恤 圆领短袖运</a>
+							<em>¥60.00</em>
+						</li>
+						<li>
+							<a href="#"><img src="../img/xpPic8.jpg"/></a>
+							<a href="#">女士短袖T恤 圆领短袖运</a>
+							<em>¥60.00</em>
+						</li>
+						<li>
+							<a href="#"><img src="../img/xpPic8.jpg"/></a>
+							<a href="#">女士短袖T恤 圆领短袖运</a>
+							<em>¥60.00</em>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="xpList_r fr">
+				<div class="xpgood_top">
+					<span class="fl"><a href="#">商品介绍</a></span>
+					<span class="fl"><a href="#">售后服务</a></span>
+					<div class="xpgood_sh fr">
+						<ul>
+							<li class="xpgood-li1"><a href="#">女式经典系列短袖T恤 56922503</a></li>
+							<li class="xpgood-li2">浅灰色</li>
+							<li class="xpgood-li3"><a href="javascript:void(0);">加入购物车</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="xpgood_item">
+					<div class="xpgood_ita">
+						<i>商品名称：女式经典系列短袖T恤 56922503</i><i>商品编号：10250202004011</i></i>上架时间：2016/6/18 16:46:13</i><i>商品毛重：/</i>
+					</div>
+					<div>
+						<img src="../img/xpPic2.jpg" alt=""/>
+						<img src="../img/xpPic2.jpg" alt=""/>
+						<img src="../img/xpPic2.jpg" alt=""/>
+						<img src="../img/xpPic2.jpg" alt=""/>
+						<img src="../img/xpPic2.jpg" alt=""/>
+						<img src="../img/xpPic2.jpg" alt=""/>
+						<img src="../img/xpPic2.jpg" alt=""/>
+						<img src="../img/xpPic2.jpg" alt=""/>
+						<img src="../img/xpPic2.jpg" alt=""/>
+					</div>
+					
+				</div>
+			</div>
 		</div>
+		<div class="xpLast">
+			<div class="xpLast_a">
+				<div class="xpLast_b">
+					您最近还浏览以下商品：					
+				</div>
+				<span id="xpLast_prev" class=" s-zb"></span>
+				<div id="xpLast_c">
+					<ul>
+						<li><a href="#"><img src="../img/xpPic8.jpg"/><p>歌莉娅 牛皮单肩斜跨手提包</p></a>
+							<div class="salePrice">
+								<i>￥1780.00</i>
+								<em>￥199.00</em>
+							</div>
+						</li>
+						<li><a href="#"><img src="../img/xpPic8.jpg"/><p>歌莉娅 牛皮单肩斜跨手提包</p></a>
+							<div class="salePrice">
+								<i>￥1780.00</i>
+								<em>￥199.00</em>
+							</div>
+						</li>
+						<li><a href="#"><img src="../img/xpPic8.jpg"/><p>歌莉娅 牛皮单肩斜跨手提包</p></a>
+							<div class="salePrice">
+								<i>￥1780.00</i>
+								<em>￥199.00</em>
+							</div>
+						</li>
+						<li><a href="#"><img src="../img/xpPic8.jpg"/><p>歌莉娅 牛皮单肩斜跨手提包</p></a>
+							<div class="salePrice">
+								<i>￥1780.00</i>
+								<em>￥199.00</em>
+							</div>
+						</li>
+						<li><a href="#"><img src="../img/xpPic8.jpg"/><p>歌莉娅 牛皮单肩斜跨手提包</p></a>
+							<div class="salePrice">
+								<i>￥1780.00</i>
+								<em>￥199.00</em>
+							</div>
+						</li>
+					</ul>
+				</div>				
+				<span id="xpLast_next" class="s-zb"></span>
+			</div>
+		</div>			
 		<!--服务Logo-->
 		<div class="call">
 			<div class="comWidth">
@@ -678,6 +925,98 @@
 					<li class="ftList8"><a href="#"></a></li>
 				</ul>
 			</div>			
+		</div>
+		<div class="rightTab">
+			<!--侧边滑动栏-40宽的小列表-->
+			<div class="rightT1">
+				<div class="rightT1_1">
+					<ul class="rightTop">
+						<li class="Rtlogo">
+							<em class="AlgPic"></em>
+							<div class="AlgPic_a">
+								奥莱购购物
+								<i></i>
+							</div>
+						</li>
+						<li class="Rtlist">
+							<img src="../img/icon2.jpg" alt="图片"/>
+						</li>
+						<li class="Rtlist">
+							<em class="AlgPic1"></em>
+							<div class="AlgPic_b">
+								二维码
+								<i></i>
+							</div>
+						</li>
+						<li class="Rtlist">
+							<span class="rightT1_2">
+								<em class="AlgPic2"></em>
+								<p>购物车</p>
+								<b>0</b>
+							</span>							
+						</li>
+						<li class="Rtlist">		
+							<em class="rightT1_3"></em>
+							<div class="AlgPic_d">
+								优惠券
+								<i></i>
+							</div>
+						</li>
+					</ul>
+					<ul class="rightBot inna">
+						<li class="Rtlist">
+							<em class="AlgPic3"><img src="../img/hot-line.gif" alt="图片"/></em>
+							<div class="AlgPic_c">
+								在线客服
+								<i></i>
+							</div>
+						</li>
+						<li class="Rtlist">
+							<em class="AlgPic4"></em>				
+						</li>
+						<li class="Rtlist">
+							<em class="AlgPic5"></em>				
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--登录-->
+			<div class="rightT2" style="display: none;">
+				<ul>
+					<li><img src="../img/xb-tou.png" alt="图片"/></li>
+					<li>您好！华盛粉丝，您尚未登录</li>
+					<li>
+						<input type="text" name="username" class="Algvip" id="username"  placeholder="手机/邮箱"/>
+					</li>
+					<li>
+						<input type="password" name="password" class="Algpw" placeholder="请输入密码"/>
+					</li>
+					<li>
+						<input type="text" class="Algtxt" name="txt" id="txt" placeholder="请输入右边的计算结果"/>
+						<img class="Algtxt_btn" src="../img/validcode.gif" alt="图片"/>
+					</li>
+					<li>
+						<button class="AlgBtn">登 入</button>
+					</li>
+					<li>	
+						<a href="#" style="margin-right: 40px;">忘记密码？</a>	
+						<a href="#">立即注册>></a>									
+					</li>
+				</ul>
+			</div>
+			<!--广告-->
+			<div class="rightT3" style="display: none;">
+				<a href="#"><img src="../img/pic21.jpg" alt="图片"/></a>
+			</div>
+			<!--二维码-->
+			<div class="rightT4">
+				<div class="rightT4_1">
+					<ul>
+						<li class="RtIph">奥莱购客户端 手机专享价 >></li>
+						<li><img src="../img/phonepic.jpg" alt="图片"/></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

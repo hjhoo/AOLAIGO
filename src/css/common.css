@@ -31,7 +31,6 @@ em,strong,i,b{
 .rightArea{float: right;}
 .hide{display: none;}
 
-
 /*	头部  topBar*/
 .topBar{
 	height: 34px;
@@ -45,6 +44,7 @@ em,strong,i,b{
 .topBar ul li a{
 	border-right: 1px solid #ccc;
 	padding: 0 14px;
+	color: #262626;
 }
 .topBar ul li a:hover{
 	color: red;

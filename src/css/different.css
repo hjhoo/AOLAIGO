@@ -39,7 +39,7 @@
     background: #d9d9d9;
     margin-left: 5px;
 }
-.banner .tabNum li:hover{
+.banner .tabNum li.active{
 	background: red;
 }
 .banner span{
@@ -195,9 +195,9 @@
 	position: relative;
     overflow: hidden;   
 }
-.New_list li.avtive{
+/*.New_list li.avtive{
 	width:400px !important;
-}
+}*/
 /*
 .New_list .NewF{
 	width: 400px;
@@ -301,6 +301,12 @@
 }
 .luxury_list li img{
 	display: block;
+}
+.luxury_hot img{
+	transition:all 0.5s;
+}
+.luxury_hot img:hover{
+	transform: translateX(10px);
 }
 .luxury_list p,.luxury_list div,.mallFs ul li div,.mallYd ul li div,.mallxb ul li div,.mallRytz ul li div,.mallMz ul li div{
     height: 30px;
@@ -431,6 +437,10 @@
 .mallBk li img,.mallBk_bottom,.mallFs ul li p,.mallYd ul li p,.mallxb ul li p,.mallRytz ul li p,.mallMz ul li p{
 	display: block;
 }
+.mallcontent{
+	height: 606px;
+	overflow: hidden;
+}
 .mallBk_top{
 	position: relative;
 	width: 463px;
@@ -514,6 +524,12 @@
 	margin-top: 14px;
 	width: 100%;
 	overflow: hidden;
+}
+.overContent img{
+	transition:all 2s;
+}
+.overContent img:hover{
+	transform:translateX(10px);
 }
 .overL_top{
 	height: 382px;
@@ -848,16 +864,19 @@
 .rightTab{
 	position: fixed;
 	top:0;
-	right: 0;
+	right: -270px;
 	width: 310px;
 	height: 100%;
-	margin-right: -270px;
-    z-index: 999;
+	/*margin-right: -270px;*/
+    z-index: 998;
+    /*overflow: hidden;*/
 }
 .rightT1{
 	position: relative;
 	width: 310px;
+	/*width: 100%;*/
 	height: 100%;
+	z-index: 999;
 }
 .rightT1_1{
 	position: absolute;
@@ -970,7 +989,8 @@
     text-align: center;
     display: none;
 }
-.rightT2,.rightT3,.rightT4{
+/*.rightT2,.rightT3,.rightT4{*/
+.rightContent{
 	text-align: center;
 	position: absolute;
 	top:0;
